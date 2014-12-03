@@ -3,34 +3,197 @@
   <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
     <span translate="aside.nav.HEADER">Navigation</span>
   </li>
+  <!-- Exportacion -->
   <li>
     <a href class="auto">      
       <span class="pull-right text-muted">
         <i class="fa fa-fw fa-angle-right text"></i>
         <i class="fa fa-fw fa-angle-down text-active"></i>
       </span>
-      <i class="glyphicon glyphicon-stats icon text-primary-dker"></i>
-      <span class="font-bold" translate="aside.nav.DASHBOARD">Dashboard</span>
+      <i class="glyphicon glyphicon-log-out icon text-success"></i>
+      <span class="font-bold" translate="aside.nav.EXPORT">Export</span>
     </a>
     <ul class="nav nav-sub dk">
       <li class="nav-sub-header">
         <a href>
-          <span translate="aside.nav.DASHBOARD">Dashboard</span>
+          <span translate="aside.nav.EXPORT">Export</span>
         </a>
       </li>
       <li ui-sref-active="active">
-        <a ui-sref="app.dashboard-v1">
-          <span>Dashboard v1</span>
+        <a ui-sref="app.opcion1">
+          <b class="label bg-info pull-right">Z</b>        
+          <span>Planilla ZINC</span>
         </a>
       </li>
       <li ui-sref-active="active">
-        <a ui-sref="app.dashboard-v2">
-          <b class="label bg-info pull-right">N</b>
-          <span>Dashboard v2</span>
+        <a ui-sref="app.opcion2">
+          <b class="label bg-info pull-right">P</b>
+          <span>Planilla PLOMO</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.opcion2">
+          <span>Parametrización Global</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.opcion2">
+          <span>Factura Comercial</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.opcion2">
+          <span>Lista de Empaque</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.opcion2">
+          <span>Informe de Ensayo</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.opcion2">
+          <span>Formulario de Liquidación</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.opcion2">
+          <span>Reporte de Pesos</span>
         </a>
       </li>
     </ul>
   </li>
+  <!-- fin exportacion -->  
+  <!-- Impuestos -->
+  <li>
+    <a href class="auto">      
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="glyphicon glyphicon-usd icon text-success"></i>
+      <span class="font-bold" translate="aside.nav.TAXATION">Taxation</span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span translate="aside.nav.TAXATION">Taxation</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.opcion1">
+          <b class="label bg-info pull-right">Z</b>        
+          <span>Verificacion de Cálculo</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.opcion2">
+          <b class="label bg-info pull-right">P</b>
+          <span>Pago Regalías Mineras</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.opcion2">
+          <span>Anticipo Pago Regalías</span>
+        </a>
+      </li>
+    </ul>
+  </li>
+  <!-- fin impuestos -->
+  <!-- Facturacion -->
+  <li>
+    <a href class="auto">      
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="glyphicon glyphicon-book icon text-success"></i>
+      <span class="font-bold" translate="aside.nav.BILLING">Facturación</span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span translate="aside.nav.BILLING">Facturación</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.opcion1">
+          <b class="label bg-info pull-right">Z</b>        
+          <span>Datos Paramétricos</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.opcion2">
+          <b class="label bg-info pull-right">P</b>
+          <span>Doscificaciones</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.opcion2">
+          <span>Facturación Exportación</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.opcion1">
+          <b class="label bg-info pull-right">Z</b>        
+          <span>Facturación Local</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.opcion2">
+          <b class="label bg-info pull-right">P</b>
+          <span>Pago Reporte Ventas</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.opcion2">
+          <span>Libro Ventas</span>
+        </a>
+      </li>
+    </ul>
+  </li>
+  <!-- fin Facturación -->
+  <!-- Administración -->
+  <li>
+    <a href class="auto">      
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="glyphicon icon-calculator icon text-success"></i>
+      <span class="font-bold" translate="aside.nav.ADMINISTRATION">Administración</span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span translate="aside.nav.ADMINISTRATION">Administración</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.opcion1">
+          <b class="label bg-info pull-right">Z</b>        
+          <span>Parametrización</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.opcion2">
+          <b class="label bg-info pull-right">P</b>
+          <span>Usuarios</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.opcion2">
+          <span>Permisos Usuarios</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.opcion2">
+          <span>Reporte Usuarios</span>
+        </a>
+      </li>
+    </ul>
+  </li>
+  <!-- fin impuestos -->
   <li ui-sref-active="active">
     <a ui-sref="app.calendar">
       <i class="glyphicon glyphicon-calendar icon text-info-dker"></i>

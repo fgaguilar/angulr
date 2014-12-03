@@ -3608,6 +3608,17 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+.input-group-addon-sm {
+  padding: 6px 6px;
+  width: 20px;
+}
+.input-group-addon-md {
+  width: 80px;
+}
+.input-group-addon-lg {
+  width: 160px;
+}
+
 .input-group-addon.input-sm {
   padding: 5px 10px;
   font-size: 12px;

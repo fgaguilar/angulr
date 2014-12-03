@@ -3224,7 +3224,7 @@ fieldset[disabled] .i-checks input + i:before {
 
 .bg-success {
   color: #c6efd0;
-  background-color: #27c24c;
+  background-color: #27c24c !important;
 }
 
 .bg-success.lt,
@@ -3536,7 +3536,7 @@ fieldset[disabled] .i-checks input + i:before {
 
 .bg-danger {
   color: #ffffff;
-  background-color: #f05050;
+  background-color: #f05050 !important;
 }
 
 .bg-danger.lt,

@@ -1,16 +1,479 @@
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</div>
-<div class="bg-light lter b-b wrapper-md">
-  <h1 class="m-n font-thin h3">Form Elements</h1>
-</div>
 <div class="wrapper-md" ng-controller="FormDemoCtrl">
-  <div class="row">
+<div class="panel panel-default">
+  <div class="panel-heading font-bold">Planilla de Calculo de la RM</div>
+    <div class="panel-body">
+      <form action="">
+      <!-- 0a -->
+        <div class="row">
+          <div class="col-sm-3 panel-heading text-left bg-success no-border">
+            <span class="text-u-c m-b-none font-bold">Pesos</span>          
+          </div>
+          <div class="col-sm-2 panel-heading text-left bg-success no-border">
+            <span class="text-u-c m-b-none font-bold">Peso</span>          
+          </div>
+          <div class="col-sm-4 panel-heading text-left bg-danger no-border">
+            <span class="text-u-c m-b-none font-bold">Factores</span>          
+          </div>
+        </div>
+      <!-- 1a -->
+        <div class="row">  
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Kilos Netos Húmedos</label>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" placeholder="1445000" ng-model="kiloNetosHumedos">
+                <span class="input-group-addon">kg</span>
+              </div>
+            </div>
+            <label class="col-sm-2 control-label">1 kg</label>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" disabled="disabled" placeholder="2.2046223" ng-model="factorKgLf">
+                <span class="input-group-addon">lf</span>
+              </div>
+            </div>
+          </div>
+        </div> 
+      <!-- 2a -->
+        <div class="row">
+          <div class="form-group">
+            <label class="col-sm-1 control-label">Humedad</label>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" placeholder="9.8" ng-model="humedad">
+                <span class="input-group-addon">%</span>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="(kiloNetosHumedos*humedad)/100">
+                <span class="input-group-addon">kg</span>
+              </div>
+            </div>
+            <label class="col-sm-2 control-label">1 kg</label>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" disabled="disabled" placeholder="32.15073">
+                <span class="input-group-addon">ot</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- 3a -->
+        <div class="row">
+          <div class="form-group">
+            <label class="col-sm-1 control-label">Merma</label>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" disabled="disabled" placeholder="1.00">
+                <span class="input-group-addon">%</span>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" disabled="disabled" placeholder="calculo">
+                <span class="input-group-addon">kg</span>
+              </div>
+            </div>
+            <label class="col-sm-2 control-label">1 $us</label>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" disabled="disabled" placeholder="6.96">
+                <span class="input-group-addon">ANB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- 4a -->
+        <div class="row">  
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Kilos Netos Secos</label>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="kiloNetosHumedos">
+                <span class="input-group-addon">kg</span>
+              </div>
+            </div>
+            <label class="col-sm-2 control-label">Fecha</label>
+            <div class="col-sm-4" ng-controller="DatepickerDemoCtrl">
+              <div class="input-group w-md">
+                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i>  </button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div> 
+      <!-- 5a -->
+        <div class="row">
+          <div class="form-group">
+            <div class="col-sm-5">
+            </div>
+            <label class="col-sm-2 control-label">Lote</label>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" placeholder="EXMSC-Z-2259-2007">
+                <span class="input-group-addon">No</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- 0b -->
+        <div class="row">
+          <div class="col-sm-2 panel-heading text-left bg-success no-border">
+            <span class="text-u-c m-b-none font-bold">Contenidos</span>          
+          </div>
+          <div class="col-sm-1 panel-heading text-left bg-success no-border">
+            <span class="text-u-c m-b-none font-bold">Leyes</span>          
+          </div>
+          <div class="col-sm-2 panel-heading text-left bg-success no-border">
+            <span class="text-u-c m-b-none font-bold">Peso</span>          
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">&nbsp;&nbsp;Lista Empaque</label>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" placeholder="2791">
+                <span class="input-group-addon">No</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- 1b -->
+        <div class="row">
+          <div class="form-group">
+            <label class="col-sm-1 control-label">Zn</label>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" placeholder="52.55" ng-model="humedad">
+                <span class="input-group-addon">%</span>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <span class="input-group-addon">kg</span>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              
+            </div>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" disabled="disabled" placeholder="6.96">
+                <span class="input-group-addon">Oficial</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- 2b -->
+        <div class="row">
+          <div class="form-group">
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <span class="input-group-addon">lf</span>
+              </div>
+            </div>
+            <div class="col-sm-2">        
+            </div>
+            <div class="col-sm-2">
+            </div>
+          </div>
+        </div>
+      <!-- 3b -->
+        <div class="row">
+          <div class="form-group">
+            <label class="col-sm-1 control-label">Ag</label>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" placeholder="466.00" ng-model="humedad">
+                <span class="input-group-addon">gr/ton</span>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <span class="input-group-addon">kg</span>
+              </div>
+            </div>
+            <label class="col-sm-2 control-label">Flete Total</label>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" placeholder="43.34">
+                <span class="input-group-addon">$us/ton</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- 4b -->
+        <div class="row">
+          <div class="form-group">
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <span class="input-group-addon">ot</span>
+              </div>
+            </div>
+            <label class="col-sm-2 control-label">Interno (MSC-AV)</label>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" placeholder="11.34">
+                <span class="input-group-addon">$us/ton</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- 5b -->
+        <div class="row">
+          <div class="form-group">
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-2">
+            </div>
+            <label class="col-sm-2 control-label">Externo (AV-MEJ)</label>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" placeholder="32.00">
+                <span class="input-group-addon">$us/ton</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- 0c -->
+        <div class="row">
+          <div class="col-sm-2 panel-heading text-left bg-success no-border">
+            <span class="text-u-c m-b-none font-bold">Base Imponible</span>          
+          </div>
+          <div class="col-sm-1 panel-heading text-left bg-success no-border">
+            <span class="text-u-c m-b-none font-bold">Cotizacion</span>          
+          </div>
+          <div class="col-sm-2 panel-heading text-left bg-success no-border">
+            <span class="m-b-none font-bold">$us</span>          
+          </div>
+        </div>
+      <!-- 1c -->
+        <div class="row">
+          <div class="form-group">
+            <label class="col-sm-1 control-label">Zn</label>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" placeholder="0.95" ng-model="humedad">
+                <span class="input-group-addon">$us/lf</span>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <span class="input-group-addon">$us</span>
+              </div>
+            </div>
+            <label class="col-sm-2 control-label">No Contenedores</label>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" placeholder="82">
+                <span class="input-group-addon">mo3</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- 2c -->
+        <div class="row">
+          <div class="form-group">
+            <label class="col-sm-1 control-label">Ag</label>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" placeholder="19.05" ng-model="humedad">
+                <span class="input-group-addon">$us/ot</span>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <span class="input-group-addon">$us</span>
+              </div>
+            </div>
+            <label class="col-sm-2 control-label">Tara Total</label>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" placeholder="168100.00">
+                <span class="input-group-addon">Tara</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- 3c -->
+        <div class="row">
+          <div class="form-group">
+            <label class="col-sm-1 control-label">Total</label>
+            <div class="col-sm-2">
+            </div>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <span class="input-group-addon">$us</span>
+              </div>
+            </div>
+            <label class="col-sm-2 control-label">Peso Bruto Humedo</label>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" placeholder="1613100.00">
+                <span class="input-group-addon">kg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- 4c -->
+        <div class="row">
+          <div class="form-group">
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <span class="input-group-addon">$us</span>
+              </div>
+            </div>
+            <div class="col-sm-2">
+            </div>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" disabled="disabled" placeholder="193">
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- 5c -->
+        <div class="row">
+          <div class="form-group">
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <span class="input-group-addon">$us</span>
+              </div>
+            </div>
+            <label class="col-sm-2 control-label">No DUE</label>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" placeholder="14062791">
+                <span class="input-group-addon">No</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- 0d -->
+        <div class="row">
+          <div class="col-sm-2 panel-heading text-left bg-success no-border">
+            <span class="text-u-c m-b-none font-bold">Impuestos</span>          
+          </div>
+          <div class="col-sm-1 panel-heading text-left bg-success no-border">
+            <span class="text-u-c m-b-none font-bold">Alicuota</span>          
+          </div>
+          <div class="col-sm-2 panel-heading text-left bg-success no-border">
+            <span class="m-b-none font-bold">$us</span>          
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">&nbsp;&nbsp;Nro. de Factura</label>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" placeholder="000899">
+                <span class="input-group-addon">No</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- 1d -->
+        <div class="row">
+          <div class="form-group">
+            <label class="col-sm-1 control-label">Zn</label>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" placeholder="5000" ng-model="humedad">
+                <span class="input-group-addon">%</span>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <span class="input-group-addon">$us</span>
+              </div>
+            </div>
+            <label class="col-sm-2 control-label">Valor Concentrado x kg</label>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" placeholder="82">
+                <span class="input-group-addon">$us</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- 2d -->
+        <div class="row">
+          <div class="form-group">
+            <label class="col-sm-1 control-label">Ag</label>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" placeholder="8.00" ng-model="humedad">
+                <span class="input-group-addon">%</span>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <span class="input-group-addon">$us</span>
+              </div>
+            </div>
+            <div class="col-sm-2">
+            </div>
+            <div class="col-sm-2">
+            </div>
+          </div>
+        </div>
+      <!-- 3d -->
+        <div class="row">
+          <div class="form-group">
+            <label class="col-sm-1 control-label">Total</label>
+            <div class="col-sm-2">
+            </div>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <span class="input-group-addon">$us</span>
+              </div>
+            </div>
+            <div class="col-sm-2">
+            </div>
+            <div class="col-sm-2">
+            </div>
+          </div>
+        </div>
+      <!-- 4d -->
+        <div class="row">
+          <div class="form-group">
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-2">
+              <div class="input-group m-b">
+                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <span class="input-group-addon">Bs</span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- ********************************************************************** -->
     <div class="col-sm-6">
       <div class="panel panel-default">
         <div class="panel-heading font-bold">Basic form</div>
@@ -19,6 +482,10 @@
             <div class="form-group">
               <label>Email address</label>
               <input type="email" class="form-control" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label>Correo Electronico</label>
+              <input type="email" class="form-control" placeholder="Ingrese correo">
             </div>
             <div class="form-group">
               <label>Password</label>
@@ -34,6 +501,8 @@
         </div>
       </div>
     </div>
+
+
     <div class="col-sm-6">
       <div class="panel panel-default">
         <div class="panel-heading font-bold">Horizontal form</div>

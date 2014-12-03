@@ -8,16 +8,20 @@
       "PROJECT" : "Projects",
       "TASK" : "Task",
       "USER" : "User",
-      "EMAIL" : "Email"
+      "EMAIL" : "Email!!!"
     },
     "NOTIFICATIONS" : "Notifications"
   }
 },
 "aside" : {
   "nav" : {
-    "HEADER" : "Navigation",
-    "DASHBOARD" : "Dashboard",
-    "CALENDAR" : "Calendar",
+    "HEADER" : "Navigación",
+    "DASHBOARD" : "Panel de Control",
+    "EXPORT" : "Exportación",
+    "TAXATION" : "Impuestos",
+    "BILLING" : "Facturación",
+    "ADMINISTRATION" : "Administración",
+    "CALENDAR" : "Calendario",
     "EMAIL" : "Email",
     "WIDGETS" : "Widgets",
     "components" : {
