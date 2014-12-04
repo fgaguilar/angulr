@@ -1,6 +1,6 @@
 <div class="wrapper-md" ng-controller="FormDemoCtrl">
 <div class="panel panel-default">
-  <div class="panel-heading font-bold">Planilla de Calculo de la RM</div>
+  <div class="panel-heading font-bold">Planilla de Calculo de la RM de Zinc</div>
     <div class="panel-body">
       <form action="">
       <!-- 0a -->
@@ -21,7 +21,7 @@
             <label class="col-sm-3 control-label">Kilos Netos Húmedos</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" placeholder="1445000" ng-model="kiloNetosHumedos">
+                <input type="text" class="form-control" placeholder="kilos" ng-model="kiloNetosHumedos">
                 <span class="input-group-addon">kg</span>
               </div>
             </div>
@@ -40,13 +40,13 @@
             <label class="col-sm-1 control-label">Humedad</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" placeholder="9.8" ng-model="humedad">
+                <input type="text" class="form-control" placeholder="9.18" ng-model="humedad">
                 <span class="input-group-addon">%</span>
               </div>
             </div>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="(kiloNetosHumedos*humedad)/100">
+                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="humedad2">
                 <span class="input-group-addon">kg</span>
               </div>
             </div>

@@ -4,6 +4,9 @@
 
   // Form controller
 app.controller('FormDemoCtrl', ['$scope', function($scope) {
+    $scope.humedad=8.25;
+    $scope.kiloNetosHumedos=1425453;
+    $scope.humedad2=$scope.humedad*$scope.kiloNetosHumedos;
     $scope.notBlackListed = function(value) {
       var blacklist = ['bad@domain.com','verybad@domain.com'];
       return blacklist.indexOf(value) === -1;
