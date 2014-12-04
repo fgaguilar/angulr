@@ -6,7 +6,7 @@
       <!-- 0a -->
         <div class="row">
           <div class="col-sm-3 panel-heading text-left bg-success no-border">
-            <span class="text-u-c m-b-none font-bold">Pesos</span>          
+            <span class="text-u-c m-b-none font-bold">Pesos</span>         
           </div>
           <div class="col-sm-2 panel-heading text-left bg-success no-border">
             <span class="text-u-c m-b-none font-bold">Peso</span>          
@@ -21,14 +21,14 @@
             <label class="col-sm-3 control-label">Kilos Netos Húmedos</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" placeholder="kilos" ng-model="kiloNetosHumedos">
+                <input type="text" class="form-control text-right input-sm" placeholder="1445000.00" ng-model="pesoKilosNetosHumedosPeso">
                 <span class="input-group-addon">kg</span>
               </div>
             </div>
             <label class="col-sm-2 control-label">1 kg</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" disabled="disabled" placeholder="2.2046223" ng-model="factorKgLf">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="2.2046223" ng-model="pesoKilosNetosHumedosFactores">
                 <span class="input-group-addon">lf</span>
               </div>
             </div>
@@ -40,20 +40,21 @@
             <label class="col-sm-1 control-label">Humedad</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" placeholder="9.18" ng-model="humedad">
+                <input type="text" class="form-control text-right input-sm" placeholder="9.18" ng-model="pesoHumedadPesos">
                 <span class="input-group-addon">%</span>
               </div>
             </div>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="humedad2">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="calculo" 
+                ng-value="calcular()" ng-model="pesoHumedadPeso">
                 <span class="input-group-addon">kg</span>
               </div>
             </div>
             <label class="col-sm-2 control-label">1 kg</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" disabled="disabled" placeholder="32.15073">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="32.15073" ng-model="pesoHumedadFactores">
                 <span class="input-group-addon">ot</span>
               </div>
             </div>
@@ -65,20 +66,20 @@
             <label class="col-sm-1 control-label">Merma</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" disabled="disabled" placeholder="1.00">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="1.00" ng-model="pesoMermaPesos">
                 <span class="input-group-addon">%</span>
               </div>
             </div>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" disabled="disabled" placeholder="calculo">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="calculo" ng-model="pesoMermaPeso">
                 <span class="input-group-addon">kg</span>
               </div>
             </div>
             <label class="col-sm-2 control-label">1 $us</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" disabled="disabled" placeholder="6.96">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="6.96" ng-model="pesoMermaFactores">
                 <span class="input-group-addon">ANB</span>
               </div>
             </div>
@@ -90,14 +91,14 @@
             <label class="col-sm-3 control-label">Kilos Netos Secos</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="kiloNetosHumedos">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="calculo" ng-model="pesoKilosNetosSecosPeso">
                 <span class="input-group-addon">kg</span>
               </div>
             </div>
             <label class="col-sm-2 control-label">Fecha</label>
             <div class="col-sm-4" ng-controller="DatepickerDemoCtrl">
               <div class="input-group w-md">
-                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="pesoKilosNetosSecosFactores" is-open="opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
                 <span class="input-group-btn">
                   <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i>  </button>
                 </span>
@@ -113,7 +114,7 @@
             <label class="col-sm-2 control-label">Lote</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" placeholder="EXMSC-Z-2259-2007">
+                <input type="text" class="form-control text-right input-sm" placeholder="EXMSC-Z-2259-2007" ng-model="pesoLoteFactores">
                 <span class="input-group-addon">No</span>
               </div>
             </div>
@@ -134,7 +135,7 @@
             <label class="col-sm-2 control-label">&nbsp;&nbsp;Lista Empaque</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" placeholder="2791">
+                <input type="text" class="form-control text-right input-sm" placeholder="2791" ng-model="contenidoListaEmpaqueFactores">
                 <span class="input-group-addon">No</span>
               </div>
             </div>
@@ -146,13 +147,13 @@
             <label class="col-sm-1 control-label">Zn</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" placeholder="52.55" ng-model="humedad">
+                <input type="text" class="form-control text-right input-sm" placeholder="52.55" ng-model="contenidoZnLeyes">
                 <span class="input-group-addon">%</span>
               </div>
             </div>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="calculo" ng-model="contenidoZnPesokg">
                 <span class="input-group-addon">kg</span>
               </div>
             </div>
@@ -161,7 +162,7 @@
             </div>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" disabled="disabled" placeholder="6.96">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="6.96" ng-model="contenidoZnTipoDeCambioFactores">
                 <span class="input-group-addon">Oficial</span>
               </div>
             </div>
@@ -174,7 +175,7 @@
             </div>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="calculo" ng-model="contenidoZnPesolf">
                 <span class="input-group-addon">lf</span>
               </div>
             </div>
@@ -190,20 +191,20 @@
             <label class="col-sm-1 control-label">Ag</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" placeholder="466.00" ng-model="humedad">
+                <input type="text" class="form-control text-right input-sm" placeholder="466.00" ng-model="contenidoAgLeyes">
                 <span class="input-group-addon">gr/ton</span>
               </div>
             </div>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="calculo" ng-model="contenidoAgPesokg">
                 <span class="input-group-addon">kg</span>
               </div>
             </div>
             <label class="col-sm-2 control-label">Flete Total</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" placeholder="43.34">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="43.34" ng-model="contenidoAgFleteTotalFactores">
                 <span class="input-group-addon">$us/ton</span>
               </div>
             </div>
@@ -216,14 +217,14 @@
             </div>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="calculo" ng-model="contenidoAgPesoot">
                 <span class="input-group-addon">ot</span>
               </div>
             </div>
             <label class="col-sm-2 control-label">Interno (MSC-AV)</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" placeholder="11.34">
+                <input type="text" class="form-control text-right input-sm" placeholder="11.34" ng-model="contenidoAgInternoFactores">
                 <span class="input-group-addon">$us/ton</span>
               </div>
             </div>
@@ -239,7 +240,7 @@
             <label class="col-sm-2 control-label">Externo (AV-MEJ)</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" placeholder="32.00">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="32.00" ng-model="contenidoAgExternoFactores">
                 <span class="input-group-addon">$us/ton</span>
               </div>
             </div>
@@ -263,20 +264,20 @@
             <label class="col-sm-1 control-label">Zn</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" placeholder="0.95" ng-model="humedad">
+                <input type="text" class="form-control text-right input-sm" placeholder="0.95" ng-model="baseZnCotizaciones">
                 <span class="input-group-addon">$us/lf</span>
               </div>
             </div>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="calculo" ng-model="baseZnSus">
                 <span class="input-group-addon">$us</span>
               </div>
             </div>
             <label class="col-sm-2 control-label">No Contenedores</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" placeholder="82">
+                <input type="text" class="form-control text-right input-sm" placeholder="82" ng-model="baseZnContenedoresFactores">
                 <span class="input-group-addon">mo3</span>
               </div>
             </div>
@@ -288,20 +289,20 @@
             <label class="col-sm-1 control-label">Ag</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" placeholder="19.05" ng-model="humedad">
+                <input type="text" class="form-control text-right input-sm" placeholder="19.05" ng-model="baseAgCotizaciones">
                 <span class="input-group-addon">$us/ot</span>
               </div>
             </div>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="calculo" ng-model="baseAgSus">
                 <span class="input-group-addon">$us</span>
               </div>
             </div>
             <label class="col-sm-2 control-label">Tara Total</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" placeholder="168100.00">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="168100.00" ng-model="baseAgTaraTotalFactores">
                 <span class="input-group-addon">Tara</span>
               </div>
             </div>
@@ -315,14 +316,14 @@
             </div>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="calculo" ng-model="baseTotalSus">
                 <span class="input-group-addon">$us</span>
               </div>
             </div>
             <label class="col-sm-2 control-label">Peso Bruto Humedo</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" placeholder="1613100.00">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="calculo" ng-model="baseTotalPesoBrutoFactores">
                 <span class="input-group-addon">kg</span>
               </div>
             </div>
@@ -335,16 +336,13 @@
             </div>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="calculo" ng-model="basePromedioSus">
                 <span class="input-group-addon">$us</span>
               </div>
             </div>
             <div class="col-sm-2">
             </div>
             <div class="col-sm-2">
-              <div class="input-group m-b">
-                <input type="text" class="form-control" disabled="disabled" placeholder="193">
-              </div>
             </div>
           </div>
         </div>
@@ -355,14 +353,14 @@
             </div>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="calculo" ng-model="baseDiferenciaSus">
                 <span class="input-group-addon">$us</span>
               </div>
             </div>
             <label class="col-sm-2 control-label">No DUE</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" placeholder="14062791">
+                <input type="text" class="form-control text-right input-sm" placeholder="14062791" ng-model="baseDiferenciaDueFactores">
                 <span class="input-group-addon">No</span>
               </div>
             </div>
@@ -383,7 +381,7 @@
             <label class="col-sm-2 control-label">&nbsp;&nbsp;Nro. de Factura</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" placeholder="000899">
+                <input type="text" class="form-control text-right input-sm" placeholder="000899" ng-model="impuestoFacturaFactores">
                 <span class="input-group-addon">No</span>
               </div>
             </div>
@@ -395,20 +393,20 @@
             <label class="col-sm-1 control-label">Zn</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" placeholder="5000" ng-model="humedad">
+                <input type="text" class="form-control text-right input-sm" placeholder="5.00" ng-model="impuestoZnAlicuota">
                 <span class="input-group-addon">%</span>
               </div>
             </div>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="calculo" ng-model="impuestoZnSus">
                 <span class="input-group-addon">$us</span>
               </div>
             </div>
             <label class="col-sm-2 control-label">Valor Concentrado x kg</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" placeholder="82">
+                <input type="text" class="form-control text-right input-sm" placeholder="82" ng-model="impuestoZnValorConcentradoFactores">
                 <span class="input-group-addon">$us</span>
               </div>
             </div>
@@ -420,13 +418,13 @@
             <label class="col-sm-1 control-label">Ag</label>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" placeholder="8.00" ng-model="humedad">
+                <input type="text" class="form-control text-right input-sm" placeholder="6.00" ng-model="impuestoAgAlicuota">
                 <span class="input-group-addon">%</span>
               </div>
             </div>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="calculo" ng-model="impuestoAgSus">
                 <span class="input-group-addon">$us</span>
               </div>
             </div>
@@ -444,7 +442,7 @@
             </div>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="calculo" ng-model="impuestoTotalSusSus">
                 <span class="input-group-addon">$us</span>
               </div>
             </div>
@@ -461,7 +459,7 @@
             </div>
             <div class="col-sm-2">
               <div class="input-group m-b">
-                <input type="text" class="form-control" disabled="disabled" placeholder="calculo" ng-model="">
+                <input type="text" class="form-control text-right input-sm" disabled="disabled" placeholder="calculo" ng-model="impuestoTotalBsSus">
                 <span class="input-group-addon">Bs</span>
               </div>
             </div>
@@ -471,9 +469,9 @@
         </div>
       </form>
     </div>
-  </div>
 </div>
 <!-- ********************************************************************** -->
+  <div class="rox">
     <div class="col-sm-6">
       <div class="panel panel-default">
         <div class="panel-heading font-bold">Basic form</div>
