@@ -6,21 +6,14 @@
     <link rel="stylesheet" href="css/styles.css">   
   </head>
   <body>
-    <h2>Lista de Tareas</h2>
-    <div ng-controller="ControladorTareas">
-      <span>{{restantes()}} de {{tareas.length}}</span>
-      [<a class="text-danger" href="" ng-click="eliminar()">eliminar</a>]
-      <ul class="unstyled">
-        <li ng-repeat="tarea in tareas">
-          <input type="checkbox" ng-model="tarea.hecho">
-          <span class="hecho-{{tarea.hecho}}">{{tarea.texto}}</span>
-        </li>
-      </ul>
-      <form ng-submit="agregarTarea()">
-        <input type="text" size="30" placeholder="Agregar Tarea" ng-model="textoNuevaTarea">
-        <button class="btn btn-primary" type="submit">Agregar</button>
+    <div ng-controller="MyCtrl">
+      <div>Raw Value: {{currencyVal}}</div>
+      <div>Filtered Value: {{currencyVal | number}}</div>
+      <form name="myForm">
+      <input type='text' name="myInput" fraction="2" ng-required="true" numeric-input = "" ng-model = "currencyVal" />
+          <button ng-disabled="myForm.$invalid">submit</button>
       </form>
-    </div> 
+    </div>    
 <!-- jQuery -->
   <script src="vendor/jquery/jquery.min.js"></script>
 
@@ -67,5 +60,6 @@
   <script src="js/directives/ui-validate.js"></script>
   <script src="js/controllers/bootstrap.js"></script>
   <script src="js/controllers/controladorUno.js"></script>
+  <script src="js/controllers/formatnumber.js"></script>
   </body>
 </html>
