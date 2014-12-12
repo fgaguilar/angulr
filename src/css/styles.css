@@ -6,3 +6,7 @@
 .logoface {
 	margin-left: -20px;
 }
+
+.navbar-brand {
+  display : none;
+}
